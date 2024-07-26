@@ -7,7 +7,6 @@ from sklearn.model_selection import train_test_split
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.metrics import accuracy_score, classification_report
 
-
 # Title and header
 st.title('Klasifikasi Penyakit Jantung')
 st.header('Prediksi Penyakit Jantung Menggunakan K-Nearest Neighbors')
@@ -34,7 +33,7 @@ X_train_normalized = scaler.fit_transform(X_train)
 X_test_normalized = scaler.transform(X_test)
 
 # Model building
-knn = KNeighborsClassifier(n_neighbors=9)
+knn = KNeighborsClassifier(n_neighbors=5)
 knn.fit(X_train_normalized, y_train)
 
 # Predictions
