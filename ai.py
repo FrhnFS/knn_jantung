@@ -65,14 +65,14 @@ if menu == "Prediksi Manual":
     st.header("👤 Prediksi Penyakit Jantung Secara Manual")
 
     input_data = [
-        st.number_input('Usia', min_value=0, max_value=100, value=25),
+        st.number_input('Usia', min_value=0, max_value=100, value=0),
         st.selectbox('Jenis Kelamin', [(0, 'Pria'), (1, 'Wanita')], format_func=lambda x: x[1]),
         st.slider('Tipe Nyeri Dada', 0, 3, 1),
-        st.number_input('Tekanan Darah Istirahat (mmHg)', min_value=80, max_value=200, value=120),
-        st.number_input('Kolesterol Serum (mg/dl)', min_value=100, max_value=400, value=200),
+        st.number_input('Tekanan Darah Istirahat (mmHg)', min_value=0, max_value=200, value=0),
+        st.number_input('Kolesterol Serum (mg/dl)', min_value=0, max_value=400, value=0),
         st.selectbox('Gula Darah Puasa > 120 mg/dl?', [(0, 'Tidak'), (1, 'Ya')], format_func=lambda x: x[1]),
         st.slider('Hasil Elektrokardiografi Istirahat', 0, 2, 1),
-        st.number_input('Detak Jantung Maksimal yang Dicapai', min_value=50, max_value=200, value=150),
+        st.number_input('Detak Jantung Maksimal yang Dicapai', min_value=0, max_value=200, value=0),
         st.selectbox('Angin yang Dipicu oleh Olahraga?', [(0, 'Tidak'), (1, 'Ya')], format_func=lambda x: x[1]),
         st.number_input('Depresi ST', min_value=0.0, max_value=10.0, value=1.0),
         st.slider('Kemiringan ST', 0, 2, 1),
